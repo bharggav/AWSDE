@@ -56,6 +56,49 @@ npm run build
 
 If you cloned into a lowercase folder (like `awsde`), `cd` into that exact folder name.
 
+
+
+## Git Conflict Help (especially `package-lock.json`)
+
+If you are getting merge/rebase conflicts, use this safe workflow:
+
+```bash
+# 1) keep your branch up-to-date
+git fetch origin
+
+# 2) rebase or merge main
+# choose one:
+git rebase origin/main
+# OR
+# git merge origin/main
+```
+
+If conflict happens in `package-lock.json`, do **not** hand-edit it. Regenerate it:
+
+```bash
+# keep package.json from your intended branch, then regenerate lockfile
+rm -f package-lock.json
+npm install
+git add package-lock.json
+```
+
+Then continue:
+
+```bash
+# rebase flow
+git rebase --continue
+
+# merge flow
+git commit
+```
+
+Quick conflict checks:
+
+```bash
+git status
+rg -n "^(<<<<<<<|=======|>>>>>>>)" .
+```
+
 ## Deployment
 
 ### Option 1: AWS Amplify
