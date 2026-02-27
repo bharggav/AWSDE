@@ -1,4 +1,6 @@
+
 # Bharggav Galla - AWS DATA ENGINEER Portfolio (React + TypeScript)
+
 
 Recruiter-ready, animated single-page portfolio built with **React + TypeScript + Vite + Tailwind CSS + Framer Motion**.
 

@@ -7,6 +7,7 @@ const HeroSection = () => (
     <div className="grid items-center gap-10 md:grid-cols-2">
       <div className="space-y-6">
         <TypingText text="Hi, I'm Bharggav Galla — AWS DATA ENGINEER" />
+
         <p className="max-w-xl text-slate-700 dark:text-slate-300">
           I design resilient cloud-native data platforms, production-grade ETL pipelines, and high-throughput streaming architectures.
         </p>

@@ -6,6 +6,7 @@ type ParticleBackgroundProps = {
   theme: 'dark' | 'light';
 };
 
+
 const dots: Dot[] = Array.from({ length: 18 }).map((_, idx) => ({
   id: idx,
   size: (idx % 4) + 2,
@@ -30,6 +31,7 @@ const ParticleBackground = ({ theme }: ParticleBackgroundProps) => (
         className={theme === 'dark' ? 'absolute rounded-full bg-cyan-300/20' : 'absolute rounded-full bg-blue-500/20'}
         style={{ width: dot.size * 4, height: dot.size * 4, left: dot.x, top: dot.y }}
         animate={{ y: [0, -20, 0], opacity: [0.2, 0.65, 0.2] }}
+        
         transition={{ repeat: Infinity, duration: dot.duration, delay: dot.delay, ease: 'easeInOut' }}
       />
     ))}

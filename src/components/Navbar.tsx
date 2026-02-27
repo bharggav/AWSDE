@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiMenu, FiMoon, FiSun, FiX } from 'react-icons/fi';
 
+
 type NavbarProps = {
   sections: string[];
   activeSection: string;

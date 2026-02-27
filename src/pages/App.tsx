@@ -29,6 +29,7 @@ const App = () => {
     >
       <Navbar sections={sectionIds} activeSection={activeSection} onToggleTheme={toggleTheme} theme={theme} />
       <ParticleBackground theme={theme} />
+
       <Suspense fallback={<div className="px-6 py-40 text-center">Loading portfolio...</div>}>
         <HeroSection />
         <AboutSection />
