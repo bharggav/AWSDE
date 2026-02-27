@@ -65,3 +65,5 @@ npm run preview
 - Replace `public/resume.pdf` with your actual resume.
 - Swap architecture placeholders with real SVG/PNG diagrams.
 
+=======
+
