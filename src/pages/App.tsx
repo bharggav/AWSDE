@@ -20,9 +20,16 @@ const App = () => {
   const activeSection = useActiveSection(sectionIds);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-slate-100 transition-colors duration-500 dark:text-slate-100">
+    <div
+      className={`min-h-screen transition-colors duration-500 ${
+        theme === 'dark'
+          ? 'bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-slate-100'
+          : 'bg-gradient-to-b from-cyan-50 via-sky-50 to-white text-slate-900'
+      }`}
+    >
       <Navbar sections={sectionIds} activeSection={activeSection} onToggleTheme={toggleTheme} theme={theme} />
-      <ParticleBackground />
+      <ParticleBackground theme={theme} />
+
       <Suspense fallback={<div className="px-6 py-40 text-center">Loading portfolio...</div>}>
         <HeroSection />
         <AboutSection />
