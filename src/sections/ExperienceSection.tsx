@@ -8,9 +8,9 @@ const ExperienceSection = () => (
       {experience.map((item) => (
         <div key={item.company} className="relative mb-8">
           <span className="absolute -left-[31px] top-1 h-4 w-4 rounded-full bg-cyan-400" />
-          <p className="text-sm text-cyan-300">{item.period}</p>
+          <p className="text-sm text-cyan-700 dark:text-cyan-300">{item.period}</p>
           <h3 className="text-xl font-semibold">{item.role} · {item.company}</h3>
-          <ul className="mt-2 list-disc space-y-1 pl-5 text-slate-300">
+          <ul className="mt-2 list-disc space-y-1 pl-5 text-slate-700 dark:text-slate-300">
             {item.achievements.map((achievement) => (
               <li key={achievement}>{achievement}</li>
             ))}

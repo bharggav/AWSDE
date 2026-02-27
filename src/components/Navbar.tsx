@@ -1,5 +1,7 @@
+
 import { motion } from 'framer-motion';
 import { FiMoon, FiSun } from 'react-icons/fi';
+
 
 type NavbarProps = {
   sections: string[];
@@ -32,5 +34,6 @@ const Navbar = ({ sections, activeSection, onToggleTheme, theme }: NavbarProps) 
     </div>
   </nav>
 );
+
 
 export default Navbar;

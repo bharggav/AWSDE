@@ -15,9 +15,13 @@ body.light {
 }
 
 .section-title {
-  @apply text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-cyan-300 to-blue-500 bg-clip-text text-transparent;
+  @apply mb-8 bg-gradient-to-r from-cyan-300 to-blue-500 bg-clip-text text-3xl font-bold text-transparent md:text-4xl;
 }
 
 .glass-card {
-  @apply rounded-2xl border border-white/20 bg-white/10 backdrop-blur-lg shadow-glass;
+  @apply rounded-2xl border border-white/20 bg-white/10 shadow-glass backdrop-blur-lg;
+}
+
+body.light .glass-card {
+  @apply border-slate-300/40 bg-white/80;
 }
